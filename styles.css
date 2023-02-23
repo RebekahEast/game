@@ -10,29 +10,6 @@ h2:hover {
     color: darkgoldenrod;
 }
 
-.main-box {
-    height: 550px;
-    width: 550px;
-    background: gray;
-    margin: auto;
-    margin-top: 1%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    border-radius: 5%;
-    padding-top: 1.5%;
-}
-
-.small-box {
-    height: 20%;
-    width: 20%;
-    background: brown;
-    margin: 1%;
-    border: white solid 1px;
-    border-radius: 10%;
-}
-
 .instructions {
     position: relative;
     font-family: geneva;
@@ -56,7 +33,39 @@ h2:hover {
     border-radius: 10%;
     position: absolute;
 }
+
+.main-box {
+    height: 550px;
+    width: 550px;
+    background: gray;
+    margin: auto;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 5%;
+    padding-top: 1.5%;
+}
+
+.small-box {
+    height: 20%;
+    width: 20%;
+    background: brown;
+    margin: 1%;
+    border: white solid 1px;
+    border-radius: 10%;
+}
   
 .instructions .show {
     visibility: visible;
+}
+
+.number-1 {
+    height: 19%;
+    width: 19%;
+    background: rgb(204, 171, 171);
+    margin: 1%;
+    border: white solid 1px;
+    border-radius: 10%;
 }
