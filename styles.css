@@ -1,7 +1,15 @@
-h2 {
+body {
+    background-color: rgb(163, 156, 156);
     text-align: center;
+    font-family: geneva;
+}
+
+header {
+    background-color:rgb(82, 82, 82);
+}
+
+h2 {
     color: brown;
-    font-family: Geneva;
     font-size: 80px;
     margin: 0;
 }
@@ -12,32 +20,28 @@ h2:hover {
 
 .instructions {
     position: relative;
-    font-family: geneva;
     cursor: pointer;
-    text-align: center;
 }
   
 .popuptext {
     visibility: hidden;
     padding: 20px;
-    text-align: center;
-    font-family: geneva;
-    width: 500px;
-    height: 510px;
+    width: 400px;
+    height: 450px;
     background-color:aliceblue;
     opacity: 0.90;
-    margin-top: 60px;
-    line-height: 2em;
-    margin-left: -350px;
+    margin-top: 50px;
+    line-height: 1.5em;
+    margin-left: -220px;
     color: black;
     border-radius: 10%;
     position: absolute;
 }
 
 .main-box {
-    height: 550px;
-    width: 550px;
-    background: gray;
+    height: 500px;
+    width: 460px;
+    background: black;
     margin: auto;
     margin-top: 1%;
     display: flex;
@@ -45,16 +49,17 @@ h2:hover {
     justify-content: center;
     flex-wrap: wrap;
     border-radius: 5%;
-    padding-top: 1.5%;
+    padding-top: 0.5%;
 }
 
 .small-box {
     height: 20%;
     width: 20%;
-    background: brown;
+    background: rgb(131, 126, 126);
     margin: 1%;
     border: white solid 1px;
     border-radius: 10%;
+    padding: 1%;
 }
   
 .instructions .show {
@@ -62,10 +67,16 @@ h2:hover {
 }
 
 .number-1 {
-    height: 19%;
-    width: 19%;
-    background: rgb(204, 171, 171);
-    margin: 1%;
-    border: white solid 1px;
+    background: rgb(245, 142, 90);
     border-radius: 10%;
+    position: absolute;
+
+}
+
+.numbers {
+    font-family: Geneva;
+    font-size: 50px;
+    text-align: center;
+    height: 114px;
+    width: 103px;
 }
