@@ -3,5 +3,5 @@ function instruction() {
     ShowInstructions.classList.toggle("show");
   }
 
-console.log("hello");
-// working
+
+  

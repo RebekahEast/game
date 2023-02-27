@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 body {
     background-color: rgb(163, 156, 156);
     text-align: center;
@@ -6,12 +10,12 @@ body {
 
 header {
     background-color:rgb(82, 82, 82);
+    padding-bottom: 20px;
 }
 
 h2 {
-    color: brown;
+    color: rgb(255, 255, 255);
     font-size: 80px;
-    margin: 0;
 }
 
 h2:hover {
@@ -30,7 +34,7 @@ h2:hover {
     height: 450px;
     background-color:aliceblue;
     opacity: 0.90;
-    margin-top: 50px;
+    margin-top: 70px;
     line-height: 1.5em;
     margin-left: -220px;
     color: black;
@@ -53,30 +57,22 @@ h2:hover {
 }
 
 .small-box {
-    height: 20%;
-    width: 20%;
+    height: 85px;
+    width: 85px;
     background: rgb(131, 126, 126);
     margin: 1%;
     border: white solid 1px;
     border-radius: 10%;
-    padding: 1%;
+    padding: 7px;
 }
   
 .instructions .show {
     visibility: visible;
 }
 
-.number-1 {
-    background: rgb(245, 142, 90);
-    border-radius: 10%;
-    position: absolute;
 
-}
-
-.numbers {
-    font-family: Geneva;
-    font-size: 50px;
-    text-align: center;
-    height: 114px;
-    width: 103px;
+hr {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
 }
