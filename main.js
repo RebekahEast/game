@@ -18,4 +18,7 @@ document.addEventListener("keydown", (event) => {
   console.log("al done!");
 });
 
-  
+function handleArrowKeyPress() {
+  var Number2 = document.getElementsByClassName("number-2");
+  Number2[0].classList.toggle("number-2");
+}
