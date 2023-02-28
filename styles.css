@@ -63,8 +63,8 @@ img {
 }
 
 .main-box {
-    height: 500px;
-    width: 500px;
+    height: 510px;
+    width: 510px;
     background: black;
     margin: auto;
     margin-top: 1%;
@@ -72,15 +72,15 @@ img {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 1%;
+    padding-top: 0.5%;
     border: white solid 5px;
 }
 
 .small-box {
-    height: 85px;
-    width: 85px;
+    height: 100px;
+    width: 100px;
     background: rgb(131, 126, 126);
-    margin: 0 10px;
+    margin: 0 5px;
     border: white solid 1px;
     border-radius: 10%;
     padding: 7px;
