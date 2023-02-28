@@ -13,6 +13,21 @@ header {
     padding-bottom: 20px;
 }
 
+.top {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    margin: 0 50px;
+}
+
+#score {
+    color: aliceblue;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
 h2 {
     color: rgb(255, 255, 255);
     font-size: 80px;
@@ -26,6 +41,11 @@ h2:hover {
     position: relative;
     cursor: pointer;
 }
+
+img {
+    width: 30px;
+    height: 30px;
+}
   
 .popuptext {
     visibility: hidden;
@@ -34,9 +54,9 @@ h2:hover {
     height: 450px;
     background-color:aliceblue;
     opacity: 0.90;
-    margin-top: 70px;
+    margin-top: 82px;
     line-height: 1.5em;
-    margin-left: -220px;
+    margin-left: -65px;
     color: black;
     border-radius: 10%;
     position: absolute;
@@ -76,3 +96,5 @@ hr {
     margin-left: auto;
     margin-right: auto;
 }
+
+
