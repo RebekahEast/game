@@ -77,17 +77,22 @@ img {
 }
 
 .small-box {
-    height: 100px;
-    width: 100px;
-    background: rgb(131, 126, 126);
-    margin: 0 5px;
-    border: white solid 1px;
-    border-radius: 10%;
-    padding: 7px;
-    font-size: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1px;
+}
+
+.cell {
+    border: white solid 1px;
+    height: 90px;
+    width: 90px;
+    padding: 10px;
+    margin: 6.5px;
+    font-size: 30px;
+    background-color: grey;
+    border-radius: 5%;
+    line-height: 3em;
 }
   
 .instructions .show {
