@@ -94,11 +94,14 @@ img {
     visibility: visible;
 }
 
-
 hr {
     width: 40%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.number-2 {
+    background-color:rgb(195, 175, 148);
 }
 
 
