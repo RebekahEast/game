@@ -4,10 +4,10 @@ function instruction() {
   ShowInstructions.classList.toggle("show");
 }
 
-//when pressing a key on the keyboard, an alert pops up
+//when pressing a key on the keyboard, something happens
 document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowUp") {
-    console.log("ehy");
+    console.log("test");
   } else if (event.key === "ArrowDown") {
     handleArrowDownPress();
   } else if (event.key === "ArrowRight") {
