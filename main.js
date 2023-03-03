@@ -9,16 +9,21 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowUp") {
     console.log("ehy");
   } else if (event.key === "ArrowDown") {
-    console.log("yhe");
+    handleArrowDownPress();
   } else if (event.key === "ArrowRight") {
-    handleArrowKeyPress();
+    handleArrowRightPress();
   } else {
     console.log("yeh");
   }
-  console.log("al done!");
+  console.log("a key was pressed!");
 });
 
-function handleArrowKeyPress() {
+function handleArrowRightPress() {
+  var Number2 = document.getElementsByClassName("number-2");
+  Number2[0].classList.toggle("number-2");
+}
+
+function handleArrowDownPress() {
   var Number2 = document.getElementsByClassName("number-2");
   Number2[0].classList.toggle("number-2");
 }
