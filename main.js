@@ -20,6 +20,7 @@ document.addEventListener("keydown", (event) => {
 
 
 //WHY DOES THIS GET RID OF ALL THE DIVS IN ORDER AND NOT JUST THE FIRST ONE IN THE ARRAY
+//WHY DOES IT NOT TOGGLE (COME BACK?)
 function handleArrowRightPress() {
   var Number2 = document.getElementsByClassName("number-2");
   Number2[0].classList.toggle("number-2");
