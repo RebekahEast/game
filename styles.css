@@ -109,8 +109,16 @@ hr {
     background-color:rgb(195, 175, 148);
 }
 
+.number-2 > span::before {
+    content: "2";
+}
+
 .number-4 {
     background-color:rgb(148, 195, 154);
+}
+
+.number-4 > span::before {
+    content: "4";
 }
 
 
