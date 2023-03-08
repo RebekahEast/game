@@ -40,11 +40,13 @@ function handleArrowUpPress() {
 
 function handleArrowLeftPress() {
   var rows = document.getElementsByClassName("row");
-  rows[0].children[3].classList.remove("number-2");
-  rows[0].children[2].classList.add("number-2");
-  rows[0].children[2].classList.remove("number-2");
-  rows[0].children[1].classList.add("number-2");
-  rows[0].children[1].classList.remove("number-2");
-  rows[0].children[0].classList.add("number-2");
+  setInterval (() => {
+    rows[0].children[3].classList.remove("number-2");
+    rows[0].children[2].classList.add("number-2");
+    rows[0].children[2].classList.remove("number-2");
+    rows[0].children[1].classList.add("number-2");
+    rows[0].children[1].classList.remove("number-2");
+    rows[0].children[0].classList.add("number-2");
+  }, 100)
 }
 
