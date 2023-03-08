@@ -1,4 +1,5 @@
 //this will pick a random cell in the one row and put a 2 there when reloaded!
+//this issue with this is that when you press left or right it still takes the div from the furthest left or right cell not the occupied one
 function randomNumber2Generator() {
     var cells = document.getElementsByClassName("cell");
     const random = Math.floor(Math.random() * cells.length); //creates random for the rows
