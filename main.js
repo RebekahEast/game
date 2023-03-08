@@ -38,15 +38,15 @@ function handleArrowUpPress() {
   rows[rowNumber].children[cellNumber].classList.toggle("number-2");
 }
 
+
+//tried writing a function to delay, need to think about how to allow pause in the motion
 function handleArrowLeftPress() {
   var rows = document.getElementsByClassName("row");
-  setInterval (() => {
-    rows[0].children[3].classList.remove("number-2");
-    rows[0].children[2].classList.add("number-2");
-    rows[0].children[2].classList.remove("number-2");
-    rows[0].children[1].classList.add("number-2");
-    rows[0].children[1].classList.remove("number-2");
-    rows[0].children[0].classList.add("number-2");
-  }, 100)
+  rows[0].children[3].classList.remove("number-2");
+  rows[0].children[2].classList.add("number-2");
+  rows[0].children[2].classList.remove("number-2");
+  rows[0].children[1].classList.add("number-2");
+  rows[0].children[1].classList.remove("number-2");
+  rows[0].children[0].classList.add("number-2");
 }
 
