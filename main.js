@@ -47,3 +47,4 @@ function handleArrowLeftPress() {
   rows[0].children[1].classList.remove("number-2");
   rows[0].children[0].classList.add("number-2");
 }
+
