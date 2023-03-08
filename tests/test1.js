@@ -22,6 +22,10 @@ function handleArrowDownPress() {
   // adds the class 'number-2' to a random cell on the 1st column
   //BUT it doesn't take into account full classes already when randomising
   //how could you add children to randomise too?
+//   Use Math.random() function to get the random number between(0-1, 1 exclusive).
+// Multiply it by the array length to get the numbers between(0-arrayLength).
+// Use Math.floor() to get the index ranging from(0 to arrayLength-1).
+//how to apply the above to child too?
 function handleArrowUpPress() {
     var rows = document.getElementsByClassName("row");
     const random = Math.floor(Math.random() * rows.length); //creates random for the rows
