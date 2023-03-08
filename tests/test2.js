@@ -1,3 +1,7 @@
+function randomNumber2Generator() {
+    alert("test");
+}
+
 document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowUp") { 
       handleArrowUpPress()
