@@ -1,5 +1,8 @@
+//this will pick a random cell in the one row and put a 2 there when reloaded!
 function randomNumber2Generator() {
-    alert("test");
+    var cells = document.getElementsByClassName("cell");
+    const random = Math.floor(Math.random() * cells.length); //creates random for the rows
+    cells[random].classList.add("number-2");
 }
 
 document.addEventListener("keydown", (event) => {
