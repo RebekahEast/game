@@ -1,7 +1,7 @@
 document.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowUp") { //when the arrow up is pressed I want a 2 to appear
+    if (event.key === "ArrowUp") { //when the arrow up is pressed I want 2s to appear
       handleArrowUpPress()
-    } else if (event.key === "ArrowDown") { //when down is pressed I want a 2 to disappear
+    } else if (event.key === "ArrowDown") { //when down is pressed I want 2s to disappear
       handleArrowDownPress();
     } else if (event.key === "ArrowRight") { //when right is pressed I want to move all 2s to the right
       handleArrowRightPress();
