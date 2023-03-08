@@ -15,4 +15,4 @@
  <p> I also had the opportunity to ask on the FAC Discord chat about Javascript timers, and attend in person meet ups at the FAC center to learn more about what I could do different</p>
  
  <h3>To Finish</h3>
- <p>This was a very big project, and at first sight I thought actually no this is too big for me. But breaking it down into smaller sections and stopping myself to think "how can I do just this bit?" and working up from there.
+ <p>This was a very big project, and at first sight I thought actually no this is too big for me. But breaking it down into smaller sections and stopping myself to think "how can I do just this bit?" helped ground me and see the smaller and bigger picture.</p>
