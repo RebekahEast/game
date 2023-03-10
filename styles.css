@@ -164,6 +164,7 @@ hr {
 #other-button {
     display: none;
     background-color: red;
+    color: white;
     padding: 50px 25px 50px 25px;
     font-size: 20px;
     width: 400px;
@@ -171,5 +172,5 @@ hr {
     font-family: geneva;
     position: absolute;
     text-shadow: 1px 2px #c63737;
-    box-shadow: 10px 10px #000000;
+    box-shadow: 14px 14px rgb(0, 0, 0);
 }
