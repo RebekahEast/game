@@ -8,10 +8,10 @@ function randomNumber2Generator() {
 
 document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowUp") { 
-      handleArrowUpPress()
+        handleArrowUpPress()
 
     } else if (event.key === "ArrowDown") { 
-      handleArrowDownPress();
+        handleArrowDownPress();
 
     } else if (event.key === "ArrowRight") { 
         delayedHandleArrowRightPress();
@@ -19,8 +19,17 @@ document.addEventListener("keydown", (event) => {
     } else if (event.key === "ArrowLeft") { 
         delayedHandleArrowLeftPress();
     } else {
-      console.log("yeh");
+        anyOtherKeyPress();
     }
     console.log("a key was pressed!");
   });
 
+//why does this need to be pressed twice for the first time?..
+function anyOtherKeyPress() {
+    let anythingElse = document.getElementById("other-button");
+        if (anythingElse.style.display === "none") {
+                anythingElse.style.display = "block";
+            } else {
+            anythingElse.style.display = "none";
+        }
+  }
