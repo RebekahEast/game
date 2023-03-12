@@ -53,3 +53,13 @@ function handleArrowRightPress() {
     rows[0].children[2].classList.remove("number-2");
     rows[0].children[3].classList.add("number-2");
 }
+
+let whatHappens1 = "when the arrow up is pressed I want 2s to appear";
+let whatHappens2 = "when down is pressed I want 2s to disappear";
+let whatHappens3 = "when right is pressed I want to move all 2s to the right";
+let whatHappens4 = "when left is pressed I want to move all 2s to the left";
+
+document.getElementById("what-happens-1").innerHTML = whatHappens1;
+document.getElementById("what-happens-2").innerHTML = whatHappens2;
+document.getElementById("what-happens-3").innerHTML = whatHappens3;
+document.getElementById("what-happens-4").innerHTML = whatHappens4;
