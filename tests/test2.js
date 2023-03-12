@@ -77,3 +77,11 @@ function delayedHandleArrowLeftPress() {
         rows[0].children[0].classList.add("number-2");
     }, 150); 
   }
+
+let whatHappens1 = "the page should auto load for one randomly positioned number 2";
+let whatHappens2 = "when right is pressed I want to move the 2 to the right with a delay on each line of code in the function";
+let whatHappens3 = "when left is pressed I want to move the 2 to the left with a delay on each line of code in the function";
+  
+document.getElementById("what-happens-1").innerHTML = whatHappens1;
+document.getElementById("what-happens-2").innerHTML = whatHappens2;
+document.getElementById("what-happens-3").innerHTML = whatHappens3;
