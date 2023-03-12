@@ -32,4 +32,13 @@ function anyOtherKeyPress() {
             } else {
             anythingElse.style.display = "none";
         }
-  }
+}
+
+
+let whatHappens1 = "for this test, I've removed the rows div and instead had just the cells in a flex";
+let whatHappens2 = "when the page loads/refreshes, a random 2 and random 4 will appear";
+let whatHappens3 = "pressing any random key thats not an arrow will give a warning pop up";
+    
+document.getElementById("what-happens-1").innerHTML = whatHappens1;
+document.getElementById("what-happens-2").innerHTML = whatHappens2;
+document.getElementById("what-happens-3").innerHTML = whatHappens3;
