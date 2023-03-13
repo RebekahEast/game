@@ -13,6 +13,21 @@ document.addEventListener("keydown", (event) => {
     console.log("a key was pressed!");
   });
 
+  function handleArrowDownPress() {
+    var rows = document.getElementsByClassName("row");
+    const randomRowIndex = Math.floor(Math.random() * rows.length); // select a random row index
+    const randomRow = rows[randomRowIndex];
+    const childCount = randomRow.children.length;
+    let randomChildIndex = Math.floor(Math.random() * childCount); // select a random child index
+    let randomChild = randomRow.children[randomChildIndex];
+    // loop until a child element that does not have the class "number-2" is found
+    while (randomChild.classList.contains("number-2")) {
+      randomChildIndex = Math.floor(Math.random() * childCount);
+      randomChild = randomRow.children[randomChildIndex];
+    }
+    randomChild.classList.add("number-2");
+}
+
 let whatHappens1 = "when the down arrow is pressed, a random 2 will appear (trying to use an array filter this time)";
 let whatHappens2 = "";
 let whatHappens3 = "";
@@ -20,5 +35,3 @@ let whatHappens3 = "";
 document.getElementById("what-happens-1").innerHTML = whatHappens1;
 document.getElementById("what-happens-2").innerHTML = whatHappens2;
 document.getElementById("what-happens-3").innerHTML = whatHappens3;
-
-console.log("hye");
