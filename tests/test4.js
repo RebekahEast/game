@@ -13,8 +13,6 @@ document.addEventListener("keydown", (event) => {
     console.log("a key was pressed!");
   });
 
-
-
 let whatHappens1 = "when the down arrow is pressed, a random 2 will appear (trying to use an array filter this time)";
 let whatHappens2 = "";
 let whatHappens3 = "";
