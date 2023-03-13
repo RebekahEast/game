@@ -8,16 +8,10 @@ function randomNumber2Generator() {
 
 document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowUp") { 
-        handleArrowUpPress()
-
     } else if (event.key === "ArrowDown") { 
         handleArrowDownPress();
-
     } else if (event.key === "ArrowRight") { 
-        delayedHandleArrowRightPress();
-
     } else if (event.key === "ArrowLeft") { 
-        delayedHandleArrowLeftPress();
     } else {
         anyOtherKeyPress();
     }
@@ -33,6 +27,8 @@ function anyOtherKeyPress() {
             anythingElse.style.display = "none";
         }
 }
+
+function handleArrowDownPress();
 
 
 let whatHappens1 = "for this test, I've removed the rows div and instead had just the cells in a flex";
