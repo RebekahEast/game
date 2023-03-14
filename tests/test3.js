@@ -1,10 +1,50 @@
-function randomNumber2Generator() {
-    var cells = document.getElementsByClassName("cell");
-    const random = Math.floor(Math.random() * cells.length); //creates random for the rows
-    const random2 = Math.floor(Math.random() * cells.length); //creates random for the rows
-    cells[random].classList.add("number-2");
-    cells[random2].classList.add("number-4");
+// function randomNumber2Generator() {
+//     var cells = document.getElementsByClassName("cell");
+//     const random = Math.floor(Math.random() * cells.length); //creates random for the rows
+//     const random2 = Math.floor(Math.random() * cells.length); //creates random for the rows
+//     cells[random].classList.add("number-2");
+//     cells[random2].classList.add("number-4");
+// }
+
+function randomNumbersGenerator () { 
+    addNumberToRandomCell("number-2")
+    addNumberToRandomCell("number-4")
+
 }
+
+function getRandomRow() {
+    var rows = document.getElementsByClassName("row");
+    const rowNumber = Math.floor(Math.random() * rows.length); //creates random for the rows
+    const randomRow = rows[rowNumber];
+    return randomRow
+}
+
+function getEmptyCells(randomRow) {
+    var cells = [...randomRow.children];
+    const emptyCells = cells.filter((cell) => {
+      if (cell.classList.contains("number-2") || cell.classList.contains("number-4")) {
+        return false;
+      } else {
+        return true;
+      }
+    });
+    return emptyCells
+}
+
+function getRandomCell(emptyCells) {
+    return Math.floor(Math.random() * emptyCells.length); //creates random for the rows
+}
+
+function addNumberToRandomCell (numberToAdd) {
+    var randomRow = getRandomRow()
+    var emptyCells = getEmptyCells(randomRow)
+    const cellNumber = getRandomCell(emptyCells)
+    if (emptyCells.length == 0) {
+        addNumberToRandomCell();
+    } else {
+      emptyCells[cellNumber].classList.add(numberToAdd);
+    }
+  }
 
 document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowUp") { 
@@ -18,18 +58,14 @@ document.addEventListener("keydown", (event) => {
     console.log("a key was pressed!");
   });
 
-//why does this need to be pressed twice for the first time?..
 function anyOtherKeyPress() {
     let anythingElse = document.getElementById("other-button");
-        if (anythingElse.style.display === "none") {
+        if (anythingElse.style.display === "") {
                 anythingElse.style.display = "block";
             } else {
-            anythingElse.style.display = "none";
+            anythingElse.style.display = "";
         }
 }
-
-function handleArrowDownPress();
-
 
 let whatHappens1 = "for this test, I've removed the rows div and instead had just the cells in a flex";
 let whatHappens2 = "when the page loads/refreshes, a random 2 and random 4 will appear";
