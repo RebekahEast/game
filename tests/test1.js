@@ -29,7 +29,12 @@ function handleArrowDownPress() {
 function handleArrowUpPress() {
     var rows = document.getElementsByClassName("row");
     const random = Math.floor(Math.random() * rows.length); //creates random for the rows
-    rows[random].children[3].classList.add("number-2");
+    const random2 = Math.floor(Math.random() * rows.length); //creates random for the rows
+    if (rows[random].children[random2].classList.contains("number-2")) {
+      
+    } else {
+    rows[random].children[random2].classList.add("number-2");
+  }
 }
 
 
@@ -56,8 +61,8 @@ function handleArrowRightPress() {
 
 let whatHappens1 = "when the arrow up is pressed I want 2s to appear";
 let whatHappens2 = "when down is pressed I want 2s to disappear";
-let whatHappens3 = "when right is pressed I want to move all 2s to the right";
-let whatHappens4 = "when left is pressed I want to move all 2s to the left";
+let whatHappens3 = "when right is pressed I want to move all 2s to the right - this doesn't do all just the top row";
+let whatHappens4 = "when left is pressed I want to move all 2s to the left - this doesn't do all just the top row";
 
 document.getElementById("what-happens-1").innerHTML = whatHappens1;
 document.getElementById("what-happens-2").innerHTML = whatHappens2;
