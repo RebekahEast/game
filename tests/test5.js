@@ -2,6 +2,7 @@
 function Number2Generator() {
   var rows = document.getElementsByClassName("row");
   rows[0].children[3].classList.add("number-2");
+  rows[3].children[3].classList.add("number-2");
 }
 
 document.addEventListener("keydown", (event) => {
@@ -18,6 +19,9 @@ document.addEventListener("keydown", (event) => {
   }
   console.log("a key was pressed!");
 });
+
+
+//how can I have that when I press left the number moves regardless of location?...think
 
 let whatHappens1 = "purposely places a number 2 on the 4th box - WORKS";
 let whatHappens2 = "";
