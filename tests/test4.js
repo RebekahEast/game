@@ -46,6 +46,7 @@ function checkAllCellsFilled() {
   }
 }
 
+// how could this stop all other functions working?
 function lostGame() {
   let anythingElse = document.getElementById("end-game");
   if (anythingElse.style.display === "") {
