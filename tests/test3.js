@@ -61,10 +61,8 @@ function anyOtherKeyPress() {
   }
 }
 
-let whatHappens1 =
-  "for this test, I've removed the rows div and instead had just the cells in a flex";
 let whatHappens2 =
-  "when the page loads/refreshes, a random 2 and random 4 will appear";
+  "when the page loads/refreshes, a random 2 and random 4 will appear - DONE";
 let whatHappens3 =
   "pressing any random key thats not an arrow will give a warning pop up";
 

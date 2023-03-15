@@ -5,16 +5,15 @@ document.addEventListener("keydown", (event) => {
   } else if (event.key === "ArrowDown") {
     //when down is pressed I want 2s to disappear
     handleArrowDownPress();
-  } else if (event.key === "ArrowRight") {
-    //when right is pressed I want to move all 2s to the right
-    handleArrowRightPress();
-  } else if (event.key === "ArrowLeft") {
-    //when left is pressed I want to move all 2s to the left
-    handleArrowLeftPress();
+    checkAllCellsFilled ();
   } else {
     console.log("yeh");
   }
   console.log("a key was pressed!");
+  const filledCells = document.querySelectorAll(".number-2");
+  var cells = document.getElementsByClassName("cell");
+  console.log(filledCells.length + " filledcells.length");
+  console.log(cells.length + " cells.length");
 });
 
 function handleArrowDownPress() {
@@ -30,7 +29,6 @@ function handleArrowDownPress() {
     }
   });
 
-
   const cellNumber = Math.floor(Math.random() * emptyCells.length); //creates random for the rows
   if (emptyCells.length == 0) {
     handleArrowDownPress();
@@ -39,9 +37,17 @@ function handleArrowDownPress() {
   }
 }
 
-let whatHappens1 =
-  "when the down arrow is pressed, a random 2 will appear ( using an array filter this time)";
-let whatHappens2 = "";
+function checkAllCellsFilled() {
+  var cells = document.getElementsByClassName("cell");
+  const filledCells = document.getElementsByClassName("number-2");
+  if (cells.length === filledCells.length) {
+    alert("All cells are filled - GAME OVER!");
+  } else {
+  }
+}
+
+let whatHappens1 = "when the down arrow is pressed, a random 2 will appear";
+let whatHappens2 = "if all the cells are full, an alert will pop up saying game over";
 let whatHappens3 = "";
 
 document.getElementById("what-happens-1").innerHTML = whatHappens1;

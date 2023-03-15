@@ -76,11 +76,11 @@ function delayedHandleArrowLeftPress() {
 }
 
 let whatHappens1 =
-  "the page should auto load for one randomly positioned number 2";
+  "the page should auto load for one randomly positioned number 2 - WORKS";
 let whatHappens2 =
-  "when right is pressed I want to move the 2 to the right with a delay on each line of code in the function";
+  "when right is pressed I want to move the 2 to the right with a delay on each line of code in the function - ONLY MANUALLY MOVES THEM";
 let whatHappens3 =
-  "when left is pressed I want to move the 2 to the left with a delay on each line of code in the function";
+  "when left is pressed I want to move the 2 to the left with a delay on each line of code in the function - ONLY MANUALLY MOVES THEM";
 
 document.getElementById("what-happens-1").innerHTML = whatHappens1;
 document.getElementById("what-happens-2").innerHTML = whatHappens2;
