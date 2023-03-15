@@ -5,7 +5,7 @@ document.addEventListener("keydown", (event) => {
   } else if (event.key === "ArrowDown") {
     //when down is pressed I want 2s to disappear
     handleArrowDownPress();
-    checkAllCellsFilled ();
+    checkAllCellsFilled();
   } else {
     console.log("yeh");
   }
@@ -44,19 +44,16 @@ function checkAllCellsFilled() {
     lostGame();
   } else {
   }
+}
 
-  //how to change background to greyed out a little?
-  function lostGame() {
+function lostGame() {
   let anythingElse = document.getElementById("end-game");
   if (anythingElse.style.display === "") {
     anythingElse.style.display = "block";
   } else {
     anythingElse.style.display = "";
   }
-  }
 }
-
-
 
 let whatHappens1 = "when the down arrow is pressed, a random 2 will appear";
 let whatHappens2 = "if all the cells are full, an alert will pop up saying game over";
