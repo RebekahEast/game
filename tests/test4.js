@@ -41,10 +41,22 @@ function checkAllCellsFilled() {
   var cells = document.getElementsByClassName("cell");
   const filledCells = document.getElementsByClassName("number-2");
   if (cells.length === filledCells.length) {
-    alert("All cells are filled - GAME OVER!");
+    lostGame();
   } else {
   }
+
+  //how to change background to greyed out a little?
+  function lostGame() {
+  let anythingElse = document.getElementById("end-game");
+  if (anythingElse.style.display === "") {
+    anythingElse.style.display = "block";
+  } else {
+    anythingElse.style.display = "";
+  }
+  }
 }
+
+
 
 let whatHappens1 = "when the down arrow is pressed, a random 2 will appear";
 let whatHappens2 = "if all the cells are full, an alert will pop up saying game over";
