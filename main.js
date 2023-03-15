@@ -20,33 +20,43 @@ document.addEventListener("keydown", (event) => {
   console.log("a key was pressed!");
 });
 
+function randomNumbersGenerator () { 
+  addNumberToRandomCell("number-2")
+  addNumberToRandomCell("number-4")
 
-function handleArrowRightPress() {
-  var Number2 = document.getElementsByClassName("number-2");
-  Number2[0].classList.toggle("number-2");
 }
 
-function handleArrowDownPress() {
-  var Number4 = document.getElementsByClassName("number-4");
-  Number4[0].classList.toggle("number-4");
-}
-
-function handleArrowUpPress() {
+function getRandomRow() {
   var rows = document.getElementsByClassName("row");
-  var rowNumber = 1;
-  var cellNumber = 2;
-  rows[rowNumber].children[cellNumber].classList.toggle("number-2");
+  const rowNumber = Math.floor(Math.random() * rows.length); //creates random for the rows
+  const randomRow = rows[rowNumber];
+  return randomRow
 }
 
+function getEmptyCells(randomRow) {
+  var cells = [...randomRow.children];
+  const emptyCells = cells.filter((cell) => {
+    if (cell.classList.contains("number-2") || cell.classList.contains("number-4")) {
+      return false;
+    } else {
+      return true;
+    }
+  });
+  return emptyCells
+}
 
-//tried writing a function to delay, need to think about how to allow pause in the motion
-function handleArrowLeftPress() {
-  var rows = document.getElementsByClassName("row");
-  rows[0].children[3].classList.remove("number-2");
-  rows[0].children[2].classList.add("number-2");
-  rows[0].children[2].classList.remove("number-2");
-  rows[0].children[1].classList.add("number-2");
-  rows[0].children[1].classList.remove("number-2");
-  rows[0].children[0].classList.add("number-2");
+function getRandomCell(emptyCells) {
+  return Math.floor(Math.random() * emptyCells.length); //creates random for the rows
+}
+
+function addNumberToRandomCell (numberToAdd) {
+  var randomRow = getRandomRow()
+  var emptyCells = getEmptyCells(randomRow)
+  const cellNumber = getRandomCell(emptyCells)
+  if (emptyCells.length == 0) {
+      addNumberToRandomCell();
+  } else {
+    emptyCells[cellNumber].classList.add(numberToAdd);
+  }
 }
 

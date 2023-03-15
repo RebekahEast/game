@@ -43,7 +43,7 @@ function handleArrowDownPress() {
 }
 
 let whatHappens1 =
-  "when the down arrow is pressed, a random 2 will appear (trying to use an array filter this time)";
+  "when the down arrow is pressed, a random 2 will appear ( using an array filter this time)";
 let whatHappens2 = "";
 let whatHappens3 = "";
 

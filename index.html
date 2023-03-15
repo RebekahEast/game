@@ -1,113 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1024</title>
-    <link href="./styles.css" rel="stylesheet">
-    <link rel="icon" href="pictures/1024.png">
-</head>
+    <link href="./styles.css" rel="stylesheet" />
+    <link rel="icon" href="pictures/1024.png" />
+  </head>
 
-<body>
-<header>
-    <h2>1024</h2>
-    <div class="top">
+  <body onload="randomNumbersGenerator()">
+    <header>
+      <h2>1024</h2>
+      <div class="top">
         <div class="instructions item" onclick="instruction()">
-            <img src="pictures/info.png" alt="info button">
-            <span class="popuptext" id="PopUpInstructions">
-                This game is great - you're going to love it! It's an easy game to pick up, but a harder game to master<br><br>
-                You will need to merge any matching numbers together. When they are matched, the tiles will combine and duplicate.<br><br>
-                Use the arrows on your keyboard to move the tiles back and forth, up and down (they will all move together, which makes it a little harder). Once you get a 1024 tile, you've won the game - good luck!<br><br>
-                TOP TIP: it can be quite a good idea to aim for one corner of the square and keep all the high numbers in one location. That way they're more likely to end up together and merge naturally. Once you've got a corner, usually only using two directions exclusively will keep large numbers in the same place.
-            </span>
+          <img src="pictures/info.png" alt="info button" />
+          <span class="popuptext" id="PopUpInstructions">
+            This game is great - you're going to love it! It's an easy game to
+            pick up, but a harder game to master<br /><br />
+            You will need to merge any matching numbers together. When they are
+            matched, the tiles will combine and duplicate.<br /><br />
+            Use the arrows on your keyboard to move the tiles back and forth, up
+            and down (they will all move together, which makes it a little
+            harder). Once you get a 1024 tile, you've won the game - good
+            luck!<br /><br />
+            TOP TIP: it can be quite a good idea to aim for one corner of the
+            square and keep all the high numbers in one location. That way
+            they're more likely to end up together and merge naturally. Once
+            you've got a corner, usually only using two directions exclusively
+            will keep large numbers in the same place.
+          </span>
         </div>
 
-        <img src="pictures/refresh.png" alt="refresh icon" border="0" onClick="window.location.reload();" class = "item">
+        <img
+          src="pictures/refresh.png"
+          alt="refresh icon"
+          border="0"
+          onClick="window.location.reload();"
+          class="item"
+        />
         <div class="item" id="score">Score: 0</div>
 
-    <div class="navigation">
-        <div class="dropdown">
+        <div class="navigation">
+          <div class="dropdown">
             <button class="dropbtn">
-                <img src="pictures/test-removebg-preview.png" alt="image of a pen with a paper and check box">
+              <img
+                src="pictures/test-removebg-preview.png"
+                alt="image of a pen with a paper and check box"
+              />
             </button>
             <div class="dropdown-content">
-                <a href="tests/test1.html">Test 1</a>
-                <a href="tests/test2.html">Test 2</a>
-                <a href="tests/test3.html">Test 3</a>
-                <a href="tests/test4.html">Test 4</a>
+              <a href="tests/test1.html">Test 1</a>
+              <a href="tests/test2.html">Test 2</a>
+              <a href="tests/test3.html">Test 3</a>
+              <a href="tests/test4.html">Test 4</a>
             </div>
-        </div> 
-    </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-    </div>
-</header>      
-    
     <div class="main-box">
-        <div class = "small-box row">
-            <div class="cell">
-                <span></span>
-            </div>
-            <div class="cell">
-                <span></span>
-            </div>
-            <div class="cell">
-                <span></span>
-            </div>
-            <div class="cell number-2">
-                <span></span>
-            </div>
+      <div class="small-box row">
+        <div class="cell">
+          <span></span>
         </div>
-        <div class = "small-box row">
-            <div class="cell number-4">
-                <span></span>
-            </div>
-            <div class="cell number-4">
-                <span></span>
-            </div>
-            <div class="cell number-2">
-                <span></span>
-            </div>
-            <div class="cell">
-                <span></span>
-            </div>
-        </div>        
-        <div class = "small-box row">
-            <div class="cell number-2">
-                <span></span>
-            </div>
-            <div class="cell">
-                <span></span>
-            </div>
-            <div class="cell">
-                <span></span>
-            </div>
-            <div class="cell">
-                <span></span>
-            </div>
-        </div>        
-        <div class = "small-box row">
-            <div class="cell number-4">
-                <span></span>
-            </div>
-            <div class="cell">
-                <span></span>
-            </div>
-            <div class="cell">
-                <span></span>
-            </div>
-            <div class="cell">
-                <span></span>
-            </div>
+        <div class="cell">
+          <span></span>
         </div>
+        <div class="cell">
+          <span></span>
+        </div>
+        <div class="cell">
+          <span></span>
+        </div>
+      </div>
+      <div class="small-box row">
+        <div class="cell">
+          <span></span>
+        </div>
+        <div class="cell">
+          <span></span>
+        </div>
+        <div class="cell">
+          <span></span>
+        </div>
+        <div class="cell">
+          <span></span>
+        </div>
+      </div>
+      <div class="small-box row">
+        <div class="cell">
+          <span></span>
+        </div>
+        <div class="cell">
+          <span></span>
+        </div>
+        <div class="cell">
+          <span></span>
+        </div>
+        <div class="cell">
+          <span></span>
+        </div>
+      </div>
+      <div class="small-box row">
+        <div class="cell">
+          <span></span>
+        </div>
+        <div class="cell">
+          <span></span>
+        </div>
+        <div class="cell">
+          <span></span>
+        </div>
+        <div class="cell">
+          <span></span>
+        </div>
+      </div>
     </div>
 
     <script src="main.js"></script>
-    </body>
-    
-    <footer>
-        <br><br><hr><br>
-        <p>By Rebekah East (she/her)</p><br>
-        <p>Based on the game 2048</p>
-    </footer>   
+  </body>
+
+  <footer>
+    <br /><br />
+    <hr />
+    <br />
+    <p>By Rebekah East (she/her)</p>
+    <br />
+    <p>Based on the game 2048</p>
+  </footer>
 </html>
