@@ -30,9 +30,7 @@ function handleArrowDownPress() {
     }
   });
 
-  // > < >= <= === !==
 
-  // const emptyCells2 = cells.filter((cell) => !cell.classList.contains("number-2"))
   const cellNumber = Math.floor(Math.random() * emptyCells.length); //creates random for the rows
   if (emptyCells.length == 0) {
     handleArrowDownPress();
