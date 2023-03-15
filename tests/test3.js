@@ -66,6 +66,5 @@ let whatHappens2 =
 let whatHappens3 =
   "pressing any random key thats not an arrow will give a warning pop up";
 
-document.getElementById("what-happens-1").innerHTML = whatHappens1;
 document.getElementById("what-happens-2").innerHTML = whatHappens2;
 document.getElementById("what-happens-3").innerHTML = whatHappens3;
