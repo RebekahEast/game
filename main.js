@@ -7,7 +7,7 @@ function instruction() {
 //when pressing a key on the keyboard, something happens
 document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowUp") {
-    handleArrowUpPress()
+    handleArrowUpPress();
   } else if (event.key === "ArrowDown") {
     handleArrowDownPress();
   } else if (event.key === "ArrowRight") {
@@ -20,43 +20,44 @@ document.addEventListener("keydown", (event) => {
   console.log("a key was pressed!");
 });
 
-function randomNumbersGenerator () { 
-  addNumberToRandomCell("number-2")
-  addNumberToRandomCell("number-4")
-
+function randomNumbersGenerator() {
+  addNumberToRandomCell("number-2");
+  addNumberToRandomCell("number-4");
 }
 
 function getRandomRow() {
   var rows = document.getElementsByClassName("row");
   const rowNumber = Math.floor(Math.random() * rows.length); //creates random for the rows
   const randomRow = rows[rowNumber];
-  return randomRow
+  return randomRow;
 }
 
 function getEmptyCells(randomRow) {
   var cells = [...randomRow.children];
   const emptyCells = cells.filter((cell) => {
-    if (cell.classList.contains("number-2") || cell.classList.contains("number-4")) {
+    if (
+      cell.classList.contains("number-2") ||
+      cell.classList.contains("number-4")
+    ) {
       return false;
     } else {
       return true;
     }
   });
-  return emptyCells
+  return emptyCells;
 }
 
 function getRandomCell(emptyCells) {
   return Math.floor(Math.random() * emptyCells.length); //creates random for the rows
 }
 
-function addNumberToRandomCell (numberToAdd) {
-  var randomRow = getRandomRow()
-  var emptyCells = getEmptyCells(randomRow)
-  const cellNumber = getRandomCell(emptyCells)
+function addNumberToRandomCell(numberToAdd) {
+  var randomRow = getRandomRow();
+  var emptyCells = getEmptyCells(randomRow);
+  const cellNumber = getRandomCell(emptyCells);
   if (emptyCells.length == 0) {
-      addNumberToRandomCell();
+    addNumberToRandomCell();
   } else {
     emptyCells[cellNumber].classList.add(numberToAdd);
   }
 }
-

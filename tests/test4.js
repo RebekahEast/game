@@ -17,7 +17,6 @@ document.addEventListener("keydown", (event) => {
   console.log("a key was pressed!");
 });
 
-
 function handleArrowDownPress() {
   var rows = document.getElementsByClassName("row");
   const rowNumber = Math.floor(Math.random() * rows.length); //creates random for the rows
@@ -31,12 +30,12 @@ function handleArrowDownPress() {
     }
   });
 
-// > < >= <= === !==
+  // > < >= <= === !==
 
   // const emptyCells2 = cells.filter((cell) => !cell.classList.contains("number-2"))
   const cellNumber = Math.floor(Math.random() * emptyCells.length); //creates random for the rows
   if (emptyCells.length == 0) {
-    handleArrowDownPress ();
+    handleArrowDownPress();
   } else {
     emptyCells[cellNumber].classList.add("number-2");
   }
