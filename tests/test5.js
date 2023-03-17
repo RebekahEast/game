@@ -11,17 +11,35 @@ document.addEventListener("keydown", (event) => {
   } else if (event.key === "ArrowDown") {
     handleArrowDownPress();
   } else if (event.key === "ArrowRight") {
-    delayedHandleArrowRightPress();
+    handleArrowRightPress();
   } else if (event.key === "ArrowLeft") {
-    delayedHandleArrowLeftPress();
+    handleArrowLeftPress();
   } else {
     console.log("yeh");
   }
   console.log("a key was pressed!");
 });
 
+function handleArrowLeftPress() {
+  // Get all cells with the "number-2" class
+  const filledCells = document.querySelectorAll('.number-2');
 
-//how can I have that when I press left the number moves regardless of location?...think
+  // Move each filled cell one to the left, if possible
+  filledCells.forEach(cell => {
+    // Check if the cell is already on the left-most column
+    if (cell.cellIndex === 0) {
+      return;
+    }
+
+    // Check if the cell to the left is empty
+    const prevCell = cell.previousElementSibling;
+    if (!prevCell.classList.contains('number-2')) {
+      // Move the current cell to the left
+      prevCell.classList.add('number-2');
+      cell.classList.remove('number-2');
+    }
+  });
+}
 
 let whatHappens1 = "purposely places a number 2 on the 4th box - WORKS";
 let whatHappens2 = "";

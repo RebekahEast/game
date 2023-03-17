@@ -56,8 +56,8 @@ function lostGame() {
   }
 }
 
-let whatHappens1 = "when the down arrow is pressed, a random 2 will appear";
-let whatHappens2 = "if all the cells are full, an alert will pop up saying game over";
+let whatHappens1 = "when the down arrow is pressed, a random 2 will appear - WORKS";
+let whatHappens2 = "if all the cells are full, an alert will pop up saying game over - WORKS";
 let whatHappens3 = "";
 
 document.getElementById("what-happens-1").innerHTML = whatHappens1;
