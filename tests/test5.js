@@ -33,7 +33,8 @@ function handleArrowLeftPress() {
   filledCells.forEach(cell => {
     // Check if the cell to the left is empty
     const prevCell = cell.previousElementSibling;
-    if (!prevCell.classList.contains('number-2')) {
+
+    if(prevCell !== null && !prevCell.classList.contains('number-2')) {
       // Move the current cell to the left
       prevCell.classList.add('number-2');
       cell.classList.remove('number-2');
@@ -55,13 +56,13 @@ function handleArrowRightPress() {
       // Move the current cell to the right
       nextCell.classList.add('number-2');
       cell.classList.remove('number-2');
-    }
+    } 
   });
 }
 
 let whatHappens1 = "purposely places a number 2 on the 4th box - WORKS";
-let whatHappens2 = "when left arrow is pressed, each number-2 will move one space to the left";
-let whatHappens3 = "when right arrow is pressed, each number-2 will move one space to the right";
+let whatHappens2 = "when left arrow is pressed, each number-2 will move one space to the left - WORKS";
+let whatHappens3 = "when right arrow is pressed, each number-2 will move one space to the right - WORKS";
 
 document.getElementById("what-happens-1").innerHTML = whatHappens1;
 document.getElementById("what-happens-2").innerHTML = whatHappens2;
