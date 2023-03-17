@@ -3,6 +3,7 @@ function Number2Generator() {
   var rows = document.getElementsByClassName("row");
   rows[0].children[3].classList.add("number-2");
   rows[3].children[3].classList.add("number-2");
+  rows[3].children[1].classList.add("number-2");
 }
 
 document.addEventListener("keydown", (event) => {
@@ -26,11 +27,6 @@ function handleArrowLeftPress() {
 
   // Move each filled cell one to the left, if possible
   filledCells.forEach(cell => {
-    // Check if the cell is already on the left-most column
-    if (cell.cellIndex === 0) {
-      return;
-    }
-
     // Check if the cell to the left is empty
     const prevCell = cell.previousElementSibling;
     if (!prevCell.classList.contains('number-2')) {
