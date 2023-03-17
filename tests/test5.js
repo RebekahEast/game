@@ -21,6 +21,8 @@ document.addEventListener("keydown", (event) => {
   console.log("a key was pressed!");
 });
 
+
+//this code checks if ANY number-2s are touching the leftmost, but I need them to stack next to each other (and then combine eventually)
 function handleArrowLeftPress() {
   // Get all cells with the "number-2" class
   const filledCells = document.querySelectorAll('.number-2');
