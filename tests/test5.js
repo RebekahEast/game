@@ -60,6 +60,54 @@ function handleArrowRightPress() {
   });
 }
 
+
+/*
+For Row 1 to Row 4			
+  Check if row 1
+    Yes: Move on
+    No:
+      For Cell 1 to Cell 4		
+        Check if it has anything in the cell	
+          Yes: 
+            Check if the cell above has anything in the cell	
+              Yes: 
+                Move on
+              No: 
+                Remove value from current cell 
+                Add value to cell above
+          No: 
+            Move on	
+
+
+
+
+      | 1 | 1 | - | 1 |      
+      | - | 1 | - | 1 |    
+      | - | - | - | 1 |    
+      | 1 | - | 1 | - |    
+
+//Full row: [1,0,1,0]
+
+//[1,1]
+
+
+*/
+
+function handleArrowUpPress() {
+  const filledCells = document.querySelectorAll('.number-2');
+  const rows = document.querySelectorAll('.row');
+  rows.forEach((row, index) => {
+    const cells = row.querySelectorAll('.cell');
+    console.log(cells);
+    console.log(index);
+    if (index !== 0) {
+      console.log(rows[index-1]);
+    }
+  });
+
+}
+
+
 let whatHappens1 = "purposely places a number 2 on the 4th box - WORKS";
 let whatHappens2 = "when left arrow is pressed, each number-2 will move one space to the left - WORKS";
 let whatHappens3 = "when right arrow is pressed, each number-2 will move one space to the right - WORKS";
