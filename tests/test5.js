@@ -97,16 +97,25 @@ function isFirstRow(rowIndex) {
 }
 
 function handleArrowUpPress() {
-  const rows = document.querySelectorAll(".row");
+  moveCellValue(false);
+}
+
+function isLastRow(rowIndex) {
+  return rowIndex === 3;
+}
+
+function moveCellValue(inverse) {
+  const rows = Array.from(document.querySelectorAll(".row"));
+  if(inverse) {
+    rows.reverse();
+  }
   rows.forEach((row, rowIndex) => {
     if (!isFirstRow(rowIndex)) {
-      const prevRow = rows[rowIndex-1]
-      const cells = row.querySelectorAll(".cell"); 
-      cells.forEach((cell, cellIndex) => { 
+      const nextRow = rows[rowIndex - 1];
+      const cells = row.querySelectorAll(".cell");
+      cells.forEach((cell, cellIndex) => {
         if (cell.classList.contains("number-2")) {
-          // console.log(prevRow);
-          // console.log(cellIndex)
-          const cellAbove = prevRow.children[cellIndex]
+          const cellAbove = nextRow.children[cellIndex];
           if (!cellAbove.classList.contains("number-2")) {
             cell.classList.remove("number-2");
             cellAbove.classList.add("number-2");
@@ -117,36 +126,15 @@ function handleArrowUpPress() {
   });
 }
 
-function isLastRow(rowIndex) {
-  return rowIndex === 3;
-}
-
 function handleArrowDownPress() {
-  const rows = document.querySelectorAll(".row");
-  rows.forEach((row, rowIndex) => {
-    if (!isLastRow(rowIndex)) {
-      const nextRow = rows[rowIndex+1]
-      const cells = row.querySelectorAll(".cell"); 
-      cells.forEach((cell, cellIndex) => { 
-        if (cell.classList.contains("number-2")) {
-          console.log(nextRow);
-          console.log(cellIndex)
-          const cellBelow = nextRow.children[cellIndex]
-          if (!cellBelow.classList.contains("number-2")) {
-            cell.classList.remove("number-2");
-            cellBelow.classList.add("number-2");
-          }
-        }
-      });
-    }
-  });
+  moveCellValue(true)
 }
 
 let whatHappens1 = "purposely places a number 2 on the 4th box - WORKS";
 let whatHappens2 =
-  "when left arrow is pressed, each number-2 will move one space to the left - WORKS";
+  "when left and right arrows are pressed, each number-2 will move one space to the left or right - WORKS";
 let whatHappens3 =
-  "when right arrow is pressed, each number-2 will move one space to the right - WORKS";
+  "when up and down arrows are pressed, each number-2 will move one space up or down - WORKS for up";
 
 document.getElementById("what-happens-1").innerHTML = whatHappens1;
 document.getElementById("what-happens-2").innerHTML = whatHappens2;
